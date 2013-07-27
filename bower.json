@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "main": "backbone.getters.setters.js",
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
-    "test"
+    "test",
+    ".gitignore",
+    ".jshintrc",
+    ".travis.yml",
+    "package.json"
   ],
   "devDependencies": {
     "requirejs": "~2.1.8",

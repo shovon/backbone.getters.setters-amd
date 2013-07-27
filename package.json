@@ -2,23 +2,18 @@
   "name": "backbone.getters.setters-amd",
   "version": "0.0.0",
   "description": "A fork of backbone.getters.setters to support AMD loading.",
-  "main": "backbone.getters.setters.js",
   "private": true,
-  "directories": {
-    "example": "example",
-    "test": "test"
-  },
   "scripts": {
     "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs http://localhost:3333/test/tests.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shovon/backbone.getters.setters-amd"
+  "author": {
+    "name": "Salehen Shovon Rahman",
+    "email": "salehen.rahman@gmail.com",
+    "url": "http://shovon.github.io"
   },
-  "author": "Salehen Shovon Rahman <salehen.rahman@gmail.com>",
-  "license": "BSD",
-  "bugs": {
-    "url": "https://github.com/shovon/backbone.getters.setters-amd/issues"
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/shovon/backbone.getters.setters-amd/blob/master/LICENSE"
   },
   "devDependencies": {
     "simple-server": "~1.0.0",

@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/shovon/backbone.getters.setters-amd.png)](https://travis-ci.org/shovon/backbone.getters.setters-amd)
 
-A custom getters and setters plugin for [Backbone.js](http://documentcloud.github.com/backbone), with support for AMD.
+A custom getters and setters plugin for [Backbone.js](http://documentcloud.github.com/backbone), with support for AMD. A fork of [backbone.getters.setters](https://github.com/berzniz/backbone.getters.setters), by [@**berzniz**](https://github.com/berzniz).
 
 ## Getting started
 
@@ -100,3 +100,7 @@ someModel.set({
 ```
 
 And now the value of 'firstName' is 'EVERYTHING' and the value of 'lastName' is 'numbers'.
+
+## License
+
+Unless stated otherwise, the license is in the `LICENSE` file.

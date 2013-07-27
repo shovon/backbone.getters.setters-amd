@@ -1,42 +1,51 @@
-Backbone.GSModel = Backbone.Model.extend({
+/* jshint eqnull: true */
+/* globals define */
 
-	get: function(attr) {
-		// Call the getter if available
-		if (_.isFunction(this.getters[attr])) {
-			return this.getters[attr].call(this);
-		}
+// TODO: write unit tests for this.
+define(["backbone", "underscore"], function (Backbone, _) {
+	"use strict";
 
-		return Backbone.Model.prototype.get.call(this, attr);
-	},
+	return Backbone.Model.extend({
 
-	set: function(key, value, options) {
-		var attrs, attr;
-
-		// Normalize the key-value into an object
-		if (_.isObject(key) || key == null) {
-			attrs = key;
-			options = value;
-		} else {
-			attrs = {};
-			attrs[key] = value;
-		}
-
-		// always pass an options hash around. This allows modifying
-		// the options inside the setter
-		options = options || {};
-
-		// Go over all the set attributes and call the setter if available
-		for (attr in attrs) {
-			if (_.isFunction(this.setters[attr])) {
-				attrs[attr] = this.setters[attr].call(this, attrs[attr], options);
+		get: function(attr) {
+			// Call the getter if available
+			if (_.isFunction(this.getters[attr])) {
+				return this.getters[attr].call(this);
 			}
-		}
 
-		return Backbone.Model.prototype.set.call(this, attrs, options);
-	},
+			return Backbone.Model.prototype.get.call(this, attr);
+		},
 
-	getters: {},
+		set: function(key, value, options) {
+			var attrs, attr;
 
-	setters: {}
+			// Normalize the key-value into an object
+			if (_.isObject(key) || key == null) {
+				attrs = key;
+				options = value;
+			} else {
+				attrs = {};
+				attrs[key] = value;
+			}
+
+			// always pass an options hash around. This allows modifying
+			// the options inside the setter
+			options = options || {};
+
+			// Go over all the set attributes and call the setter if available
+			for (attr in attrs) {
+				if (_.isFunction(this.setters[attr])) {
+					attrs[attr] = this.setters[attr].call(this, attrs[attr], options);
+				}
+			}
+
+			return Backbone.Model.prototype.set.call(this, attrs, options);
+		},
+
+		getters: {},
+
+		setters: {}
+
+	});
 
 });

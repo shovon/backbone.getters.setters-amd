@@ -1,3 +1,4 @@
+/* jshint eqnull: true */
 /* globals define */
 
 // TODO: write unit tests for this.

@@ -6,6 +6,10 @@
   "scripts": {
     "test": "./node_modules/mocha-phantomjs/bin/mocha-phantomjs http://localhost:3333/test/tests.html"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shovon/backbone.getters.setters-amd"
+  },
   "author": {
     "name": "Salehen Shovon Rahman",
     "email": "salehen.rahman@gmail.com",

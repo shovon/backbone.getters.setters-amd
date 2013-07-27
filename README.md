@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/shovon/backbone.getters.setters-amd.png)](https://travis-ci.org/shovon/backbone.getters.setters-amd)
 
-A custom getters and setters plugin for [Backbone.js](http://documentcloud.github.com/backbone), with support for AMD. A fork of [backbone.getters.setters](https://github.com/berzniz/backbone.getters.setters), by [@**berzniz**](https://github.com/berzniz).
+A custom getters and setters plugin for [Backbone.js](http://documentcloud.github.com/backbone), with support for AMD. A fork of [backbone.getters.setters](https://github.com/berzniz/backbone.getters.setters), by [@berzniz](https://github.com/berzniz).
 
 ## Getting started
 
@@ -103,4 +103,4 @@ And now the value of 'firstName' is 'EVERYTHING' and the value of 'lastName' is 
 
 ## License
 
-Unless stated otherwise, the license is in the `LICENSE` file.
+Unless stated otherwise, the license is in the [`LICENSE`](https://github.com/shovon/backbone.getters.setters-amd/blob/master/LICENSE) file.

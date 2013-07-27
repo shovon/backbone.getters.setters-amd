@@ -63,12 +63,12 @@ Configure your setters by adding a setter function for each attribute:
 ```js
 var MyModel = GSModel.extend({
   setters: {
-      firstName: function(value) {
-        return value.toUpperCase();
-      },
-      lastName:: function(value) {
-        return value.toLowerCase();
-      }
+    firstName: function(value) {
+      return value.toUpperCase();
+    },
+    lastName:: function(value) {
+      return value.toLowerCase();
+    }
   },
 
   defaults: {

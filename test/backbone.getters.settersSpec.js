@@ -25,5 +25,26 @@ define(function (require) {
         expect(model.get("fullname")).to.be(FULLNAME_ALT);
       });
     });
+
+    describe("setters", function () {
+      var DESCRIPTION = "Get some milk."
+        , DESCRIPTION_SPACE = "    " + DESCRIPTION + " "
+        , DESCRIPTION_ALT = "Do homework."
+        , DESCRIPTION_ALT_SPACE = "   " + DESCRIPTION_ALT + "     "
+        , MyModel = GSModel.extend({
+          setters: {
+            description: function (value) {
+              return value.trim();
+            }
+          }
+        });
+
+      it("should allow us apply custom sanitization before setting a value", function () {
+        var model = new MyModel({ description: DESCRIPTION_SPACE });
+        expect(model.get("description")).to.be(DESCRIPTION);
+        model.set("description", DESCRIPTION_ALT_SPACE);
+        expect(model.get("description")).to.be(DESCRIPTION_ALT);
+      });
+    });
   });
 });

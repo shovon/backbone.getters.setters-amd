@@ -11,9 +11,8 @@
     }
   });
 
-  mocha.setup("bdd");
-
   require(["backbone.getters.settersSpec"], function () {
-    mocha.run();
+    if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+    else { mocha.run(); }
   });
 })();
